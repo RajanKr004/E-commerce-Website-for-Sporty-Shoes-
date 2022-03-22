@@ -1,0 +1,20 @@
+<%@page import="com.project.ConnectionProvider"%>
+<%@ page import="java.sql.*"%>
+<% 
+String email=session.getAttribute("email").toString();
+String address=request.getParameter ("address");
+String city=request.getParameter("city");
+String state=request.getParameter("state");
+String country=request.getParameter("country");
+String mobileNumber=request.getParameter("mobilenumber");
+String paymentMethod=request.getParameter("paymentMethod");
+String tranactionId="";
+tranactionId=request.getParameter("transactionID");
+String status="bill";
+try{
+Connection con=ConnectionProvider .getCon()ring sql
+PreparedStatement ps=con.prepareStatement ("update us").
+catch (Exception e){
+	
+}
+%>

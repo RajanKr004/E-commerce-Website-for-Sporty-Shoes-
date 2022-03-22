@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+G:\Simplilearn Projects\EcommerceProject Phase 3\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+1487113552.index
+2862647487.index
+1149085625.index
+3792158792.index
+1708738778.index
+1523404683.index
+1030886367.index

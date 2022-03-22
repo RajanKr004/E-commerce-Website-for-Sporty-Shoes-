@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Phase 3 Ecommerce website">
+        <property name="context-root" value="Phase_3_Ecommerce_website"/>
+    </wb-module>
+</project-modules>

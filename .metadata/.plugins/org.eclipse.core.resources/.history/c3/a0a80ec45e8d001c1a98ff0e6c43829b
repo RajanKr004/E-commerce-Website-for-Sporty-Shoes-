@@ -1,0 +1,21 @@
+<%@page import="com.project.ConnectionProvider"%>
+<%@page import="java.sql.*"%>
+<%
+String email=session.getAttribute("email"). tostring ();
+String subject=request.getParameter ("subject");
+String body=request .getParameter ("body");
+try
+{
+Connection con=ConnectionProvider.getCon();
+PreparedStatement ps=con.prepareStatement ("insert into mes sage (email, subject, body) values (?,?)");
+ps.setstring(1, email)5
+ps.setstring(2, subject) ;
+ps.setstring(3, body) ;
+ps.executeupdate();
+response.sendRedirect("messageUs.jsp?msg=valid");
+}
+catch(Exception e)
+{
+System.out.println(e) ;|
+response. sendRedirect ("messageUs.jsp?msg=inval id") ;)}
+%>

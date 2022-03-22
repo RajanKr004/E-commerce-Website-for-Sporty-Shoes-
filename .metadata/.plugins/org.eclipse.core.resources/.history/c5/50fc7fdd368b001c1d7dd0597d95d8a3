@@ -1,0 +1,31 @@
+package com.project;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class Xxx {
+	public static void main(String args[]) {
+		try {
+			String driver = "com.mysql.cj.jdbc.Driver";
+			Class.forName(driver);
+			String url = "jdbc:mysql://localhost:3306/ecommerceproject";
+			String username = "root";
+			String password = "2020";
+			Connection con = DriverManager.getConnection(url, username, password);
+			String sql = "select * from users";
+			Statement st = con.createStatement();
+			ResultSet rs = st.executeQuery(sql);
+			while (rs.next()) {
+				System.out.println("name: " + rs.getString(1));
+				System.out.println("email: " + rs.getString(2));
+				System.out.println("mobile: " + rs.getString(3));
+			}
+			con.close();
+		} catch (Exception e) {
+			System.out.print(e);
+		}
+	}
+
+}

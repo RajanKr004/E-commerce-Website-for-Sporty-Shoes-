@@ -1,0 +1,23 @@
+<%@page import="com.project.ConnectionProvider"%>
+<%@ page import="java.sql.*"%>
+
+<%
+String email = request.getParameter("email");
+String mobileNumber = request.getParameter("mobileNumber");
+String securityQuestion = request.getParameter("securityQuestion");
+String answer = request.getParameter("answer");
+String newPassword = request.getParameter("newPassword");
+
+int check = 0;
+
+try {
+	Connection con = ConnectionProvider.getCon();
+	Statement st = con.createStatement();
+	ResultSet rs = st.executeQuery("select * from users where email='" + email + "' and mobilenumber='" + mobileNumber
+	+ "' and securityQuestion='" + securityQuestion + "'");
+}
+
+catch (Exception e) {
+	System.out.println(e);
+}
+%>

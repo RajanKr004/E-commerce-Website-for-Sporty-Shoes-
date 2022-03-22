@@ -1,0 +1,22 @@
+<%@page import="com.project.ConnectionProvider"%>
+<%@ page import="java.sql.*"%>
+
+<%
+String email=session.getAttribute("email").tostring();
+String product_id=request.getParameter("id" );
+int quantity=1;
+int product_price=0;
+int product_total=0;
+int cart_total=0;
+int
+z=0;
+try{
+Connection con=ConnectionProvider.getCon ();
+statement st=con.createsttatement();
+Resultset rs=st.executeQuery("select * 	from product where id=' "+product_id+"'");
+while(rs.next())
+{
+product_price=rs.getInt(4);
+product_total=product_price;
+}
+%>

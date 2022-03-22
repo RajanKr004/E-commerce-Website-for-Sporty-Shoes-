@@ -1,0 +1,20 @@
+<%@page import="com.project.ConnectionProvider"%>
+<%@ page import="java.sql.*"%>
+
+<%
+String id = request.getParameter("id");
+String name = request.getParameter("name");
+String category = request.getParameter("category");
+String price = request.getParameter("price");
+String status = request.getParameter("status");
+
+try {
+	Connection con = ConnectionProvider.getCon();
+	Statement st = con.createStatement();
+	st.executeUpdate("update product name='" + name + "' category='" + category + "' price='" + price + "' status='"
+	+ status + "' where id='" + id + "'");
+
+} catch (Exception e) {
+
+}
+%>

@@ -1,0 +1,15 @@
+<%@page import="com.project.ConnectionProvider"%>
+<%@ page import="java.sql.*"%>
+
+<%
+String name=request.getParameter("name");
+String email=request.getParameter("email");
+String mobilenumber=request.getParameter("phonenumber");
+String securityQuestion=request.getParameter("");
+String answer=request.getParameter("name");
+String password=request.getParameter("name");
+String address=request.getParameter("name");
+String city=request.getParameter("name");
+String state=request.getParameter("name");
+String country=request.getParameter("name");
+%>
